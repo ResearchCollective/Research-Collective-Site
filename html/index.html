@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <title>Research Collective - Contract Research Organization</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon_1.ico" type="image/x-icon">
+    <style>
+      @keyframes animate-circle {
+      	from {
+      		transform: scale(0);
+      		opacity: 1;
+      	}
+      	to {
+      		transform: scale(1);
+      		opacity: 0;
+      	}
+      }
+      #preloader{
+      	width: 100%;
+      	height: 100%;
+      	position: fixed;
+      	top: 0;
+      	left: 0;
+      	z-index: 999;
+      	background: #1C1C1C;
+      	background: linear-gradient(to right, rgba(36, 31, 31, 1) 0%, rgba(36, 31, 31, 1) 32%, rgba(74, 71, 70, 1) 100%);
+      }
+      .loader {
+      	position: fixed;
+      	top: 50%;
+      	left: 50%;
+      	height: 10rem;
+      	width: 10rem;
+      	transform: translateX(-50%) translateY(-50%);
+      }
+      .loader > .circle {
+      	position: absolute;
+      	height: inherit;
+      	width: inherit;
+      	background: #B66449;
+      	border-radius: 0;
+      	animation: animate-circle 2s cubic-bezier(.9, .24, .62, .79) infinite;
+      }
+      .loader > .circle:nth-of-type(1) {
+      	animation-delay: 0s;
+      }
+      .loader > .circle:nth-of-type(2) {
+      	animation-delay: calc(2s / -3);
+      }
+      .loader > .circle:nth-of-type(3) {
+      	animation-delay: calc(2s / -6);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <main class="main main--home" style="opacity:0">
+      <canvas class="noise" id="noise"></canvas>
+      <div class="header">
+        <div class="header__left">
+          <div class="header__letter">RC</div>
+          <div class="header__socials"><a href="" target="_blank">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#fb"></use>
+              </svg></a><a href="" target="_blank">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#tw"></use>
+              </svg></a><a href="" target="_blank">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#in"></use>
+              </svg></a></div>
+        </div>
+        <div class="header__right">
+          <ul class="header__menu">
+            <li class="active"><a class="js-scroll-link" href="javascript:;" data-link="0">Home</a></li>
+            <li><a class="js-scroll-link" href="javascript:;" data-link="1">Services</a></li>
+            <li><a class="js-scroll-link" href="javascript:;" data-link="2">Projects</a></li>
+            <li><a class="js-scroll-link" href="javascript:;" data-link="3">Community</a></li> 
+            <li><a class="js-scroll-link" href="javascript:;" data-link="4">Partners</a></li> 
+            <li><a class="js-scroll-link" href="javascript:;" data-link="5">Articles</a></li>
+            <li><a class="js-scroll-link" href="javascript:;" data-link="6">Contact</a></li>
+          </ul>
+          <div class="header__phone"><a href="tel:+14074623737">+1(407) 462 3737</a></div>
+        </div>
+      </div>
+      <div class="scroll">
+        <div class="home-page">
+          <div class="page-title show">
+            <ul>
+              <li>
+                <div class="title">Intro</div>
+                <!-- <div class="number">1.0</div> -->
+              </li>
+              <li>
+                <div class="title">Services</div>
+                <!-- <div class="number">2.0</div> -->
+              </li>
+              <li>
+                <div class="title">Projects</div>
+                <!-- <div class="number">3.0</div> -->
+              </li>
+              <!-- <li> -->
+                <!-- <div class="title">testimonials</div> -->
+                <!-- <div class="number">4.0</div> -->
+              <!-- </li> -->
+              <li>
+                <!-- <div class="title">working experience</div> -->
+                <!-- <div class="number">5.0</div> -->
+              </li>
+              <li>
+                <div class="title">Articles</div>
+                <!-- <div class="number">5.0</div> -->
+              </li>
+              <li>
+                <div class="title">contact</div>
+                <!-- <div class="number">6.0</div> -->
+              </li>
+            </ul>
+            <canvas class="noise noise--inner" id="noise_menu"></canvas>
+          </div>
+          <div class="scrollable">
+            <section class="home">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Science Services</div>
+                    <div>1.0</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Research</div>
+                    <div class="h1">Collective</div>
+                    <!-- <div class="h1">Design</div> -->
+                  </div>
+                  <div class="content__description">
+                    <div class="medium">Scientific services for biotech startups, medical clinics, and venture firms.</div>
+                  </div>
+                  <div class="content__btn-block">
+                    <div class="content__btn-label small"></div><a class="content__btn-btn btn btn--arrow js-scroll-link" href="#contactme" data-link="6">
+                      <svg>
+                        <use xlink:href="./svg/sprite.svg#arrow"></use>
+                      </svg>
+					  Contact
+					  </a>
+                  </div>
+                  <div class="home__numbers">
+                    <!-- <div class="home__number"> -->
+                      <!-- <div class="home__number-digital" data-number="8">8</div> -->
+                      <!-- <div class="home__number-text small">Years <br>experience</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="home__number"> -->
+                      <!-- <div class="home__number-digital" data-number="5">5</div> -->
+                      <!-- <div class="home__number-text small">Themeforest <br>awwards</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="home__number"> -->
+                      <!-- <div class="home__number-digital" data-number="60">60</div> -->
+                      <!-- <div class="home__number-text small">Projects <br>Done</div> -->
+                    <!-- </div> -->
+                  </div>
+                </div>
+                <div class="content__right">
+                  <div class="home__circles">
+                    <div class="home__circles-lines"></div>
+                    <div class="home__circle home__circle--left"><img class="home__circle-img" src="img/research-collective-logo.svg" alt=""></div>
+                    <div class="home__circle home__circle--right">
+                      <div class="home__circle-text">
+                        <!-- <label class="input-file" for="brief"><span>Fill out the <br>brief to find out <br>the cost</span></label> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="scrollable">
+            <section class="projects">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Services</div>
+                    <!-- <div>2.0</div> -->
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Services</div>
+                  </div>
+                  <ul class="content__menu projects__menu">
+                    <li class="active"><a  href="#contactme">Clinical Research</a></li>
+                    <li><a  href="#contactme">IRB Applications</a></li>
+					<li><a  href="#contactme">Participant Recruitment</a></li>
+                    <li><a  href="#contactme">Due Dilligence</a></li>
+                    <!-- <li><a href="javascript:;">Gilhouse - architecture website</a></li> -->
+                    <!-- <li><a href="javascript:;">gilber - personal website</a></li> -->
+                    <!-- <li><a href="javascript:;">jonny - personal website</a></li> -->
+                  </ul>
+                  <!-- <div class="content__btn-block"> -->
+                    <!-- <div class="content__btn-label small">View all works</div><a class="content__btn-btn btn btn--arrow" href="https://www.behance.net/" target="_blank" rel="nofollow"> -->
+                      <!-- <svg> -->
+                        <!-- <use xlink:href="./svg/sprite.svg#arrow"></use> -->
+                      <!-- </svg></a> -->
+                  <!-- </div> -->
+                </div>
+                <div class="content__right">
+                  <div class="projects__blocks">
+                    <!-- <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-1.jpg" alt=""></a></div> -->
+                    <!-- <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-2.jpg" alt=""></a></div> -->
+                    <!-- <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-3.jpg" alt=""></a></div> -->
+                    <!-- <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-4.jpg" alt=""></a></div> -->
+                    <!-- <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-5.jpg" alt=""></a></div> -->
+                    <!-- <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-6.jpg" alt=""></a></div> -->
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="scrollable">
+            <section class="awards">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Projects</div>
+                    <!-- <div>3.0</div> -->
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Active</div>
+                    <div class="h1">Projects</div>
+                  </div>
+                  <div class="content__description">
+                    <!-- <div class="small">Hello, my name is Pavel Suslov and i am UX/UI designer and front-end developer, im working via developer 9 years and i know all about design</div> -->
+                  </div>
+                  <!-- <div class="content__btn-block"> -->
+                    <!-- <div class="content__btn-label small">View behance</div><a class="content__btn-btn btn btn--arrow" href="#"> -->
+                      <!-- <svg> -->
+                        <!-- <use xlink:href="./svg/sprite.svg#arrow"></use> -->
+                      <!-- </svg></a> -->
+                  <!-- </div> -->
+                </div>
+                <div class="content__right">
+                  <div class="content__subtitle">Some of our active <span>research projects</span></div>
+                  <div class="content__awards awards__list">
+                    <div class="content__award">
+                      <!-- <div class="content__award-img"><img src="img/award-1.png" alt=""></div> -->
+                      <div class="content__award-title">
+                        <p>Cavity Prevention</p>
+                      </div>
+                      <div class="content__award-text small">Engineered bacteria for preventing dental cavity formation</div>
+                    </div>
+                    <div class="content__award">
+                      <!-- <div class="content__award-img"><img src="img/award-2.png" alt=""></div> -->
+                      <div class="content__award-title">
+                        <p>Strength</p>
+                      </div>
+                      <div class="content__award-text small">Follistatin, delivered by plasmid gene therapies, may improve strength and stamina</div>
+                    </div>
+                    <div class="content__award">
+                      <!-- <div class="content__award-img"><img src="img/award-3.png" alt=""></div> -->
+                      <div class="content__award-title">
+                        <p>Cognition</p>
+                      </div>
+                      <div class="content__award-text small">Klotho, delivered by plasmid gene therapy, may help prevent cognitive decline</div>
+                    </div>
+					<div class="content__award">
+                      <!-- <div class="content__award-img"><img src="img/award-4.png" alt=""></div> -->
+                      <div class="content__award-title">
+                        <p>Skin Protection</p>
+                      </div>
+                      <div class="content__award-text small">A breath mint containing carotenoids for enhancing protection against the sun</div>
+                    </div>
+                    <!-- <div class="content__award"> -->
+                      <!-- <div class="content__award-img"><img src="img/award-4.png" alt=""></div> -->
+                      <!-- <div class="content__award-title"> -->
+                        <!-- <p>Exclusive Author</p> -->
+                      <!-- </div> -->
+                      <!-- <div class="content__award-text small">Sells items exclusively on Envato Market</div> -->
+                    <!-- </div> -->
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="scrollable">
+            <section class="testimonials">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Community</div>
+                    <!-- <div>4.0</div> -->
+                  </li>
+                </ul>
+              </div>
+              <div class="content" style="background-image: url(images/testmonials-bg.png); background-size: auto 100%; background-repeat: no-repeat; background-position: center center;">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">200+</div>
+                    <div class="h1">community</div>
+                    <div class="h1">members</div>
+                    <!-- <div class="small">We are a global community of scientists, clinicians, and technologists</div> -->
+                  </div>
+                  <div class="testimonials__clients">
+            <!--         <div class="testimonials__client"><img src="img/client-1.png" alt=""></div>
+                    <div class="testimonials__client"><img src="img/client-2.png" alt=""></div>
+                    <div class="testimonials__client"><img src="img/client-3.png" alt=""></div>
+                    <div class="testimonials__client"><img src="img/client-4.png" alt=""></div> -->
+                  </div>
+                </div>
+                <div class="content__right">
+                  <div class="content__subtitle">We are a <span>global</span> community of scientists, clinicians, and technologists</div>
+                  <div class="content__slider slides testimonials__slider">
+                    <div class="slides__container">
+                      <div class="slides__inner">
+                        <div class="slide">
+                      <!--     <div class="content__slider-text small">“ </div> -->
+					       <!-- <div class="content__slider-name">Join the public discussion on Telegram</div> -->
+               <!--            <a class="content__btn-btn btn btn--arrow js-scroll-link" target="_blank" href="https://t.me/+Uq1yiQaS87yLKp4p" data-link="6">
+                      <svg>
+                        <use xlink:href="./svg/sprite.svg#arrow"></use>
+                      </svg>
+					  Join
+					  </a> -->
+
+                          <!-- <div class="content__slider-staff small">Apartment view lake at Brooklyn</div> -->
+                        </div>
+                       <div class="slide">
+                          <div class="content__slider-text small">“ Test2 you are seeking an Interior designer that will understand exactly your needs, and someone who will utilise their creative and technical skills in parity with your taste, then Suzanne at The Bauhaus Studio is perfect.</div>
+                          <div class="content__slider-name">elisa</div>
+                          <div class="content__slider-staff small">Apartment view lake at Brooklyn</div>
+                        </div>
+                        <div class="slide">
+                          <div class="content__slider-text small">“ Test3  you are seeking an Interior designer that will understand exactly your needs, and someone who will utilise their creative and technical skills in parity with your taste, then Suzanne at The Bauhaus Studio is perfect.</div>
+                          <div class="content__slider-name">david & elisa</div>
+                          <div class="content__slider-staff small">Apartment view lake at Brooklyn</div>
+                        </div>
+                        <div class="slide">
+                          <div class="content__slider-text small">“ Test4 you are seeking an Interior designer that will understand exactly your needs, and someone who will utilise their creative and technical skills in parity with your taste, then Suzanne at The Bauhaus Studio is perfect.</div>
+                          <div class="content__slider-name">david</div>
+                          <div class="content__slider-staff small">Apartment view lake at Brooklyn</div>
+                        </div> 
+                      </div>
+                    </div>
+                    <!-- <div class="slides__controls"> -->
+                      <!-- <button class="slides__btn slides__btn--prev btn btn--invert btn--arrow" id="prevButton"> -->
+                        <!-- <svg> -->
+                          <!-- <use xlink:href="./svg/sprite.svg#arrow"></use> -->
+                        <!-- </svg> -->
+                      <!-- </button> -->
+                      <!-- <button class="slides__btn slides__btn--next btn btn--arrow" id="nextButton"> -->
+                        <!-- <svg> -->
+                          <!-- <use xlink:href="./svg/sprite.svg#arrow"></use> -->
+                        <!-- </svg> -->
+                      <!-- </button> -->
+                    <!-- </div> -->
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div> 
+		  
+		  
+		   <div class="scrollable">
+            <section class="experience">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Partners</div>
+                    <!-- <div>5.0</div> -->
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__bg"></div>
+				<!-- <div class="content__bg" <style="background-image: url(images/exp-bg.jpg);"></div> -->
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Partner</div>
+                    <div class="h1">Orgs</div>
+                  </div>
+                  <div class="content__description">
+                    <div class="small">We are a network dedicated to bringing innovative therapies to people.</div>
+                  </div>
+                  <!-- <div class="content__btn-block"><a class="content__btn-btn btn" href="#">resume</a></div> -->
+                </div>
+                <div class="content__right">
+                  <div class="content__awards experience__list">
+                    <div class="content__award">
+                      <!-- <div class="content__award-img"><img src="img/soc-fb.svg" alt=""></div> -->
+                      <div class="content__award-title">
+                        <p>Minicircle</p>
+                      </div>
+                      <div class="content__award-text small">A biotech startup increasing healthspan through semi-permanent plasmid gene therapies</div>
+                    </div>
+                    <div class="content__award">
+                      <!-- <div class="content__award-img"><img src="img/soc-be.svg" alt=""></div> -->
+                      <div class="content__award-title">
+                        <p>Lantern Bioworks</p>
+                      </div>
+                      <div class="content__award-text small">A biotech startup modifying bacteria to prevent dental cavity formation</div>
+                    </div>
+                    <div class="content__award">
+                      <!-- <div class="content__award-img"><img src="img/soc-tw.svg" alt=""></div> -->
+                      <div class="content__award-title">
+                        <p>Oval Bio</p>
+                      </div>
+                      <div class="content__award-text small">A biomedical device company delivering science-backed products</div>
+                    </div>
+                    <div class="content__award">
+                      <!-- <div class="content__award-img"><img src="img/soc-inst.svg" alt=""></div> -->
+                      <div class="content__award-title">
+                        <p>GARM Clinic</p>
+                      </div>
+                      <div class="content__award-text small">A regenerative medicine clinic and IRB located in Roatan/Prospera in Honduras</div>
+                    </div>
+                    <div class="content__award">
+                      <!-- <div class="content__award-img"><img src="img/soc-in.svg" alt=""></div> -->
+                      <div class="content__award-title">
+                        <p>Prospera</p>
+                      </div>
+                      <div class="content__award-text small">A special economic zone advancing biomedical research and tourism </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+		  
+		  
+		  
+          <div class="scrollable">
+            <section class="news">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Articles</div>
+                    <!-- <div>5.0</div> -->
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">latest</div>
+                    <div class="h1">articles</div>
+                    <div class="small">We are pushing science forward by applying the latest in trust-based technology</div>
+                  </div>
+                  <ul class="content__menu news__menu">
+                    <li class="active"><a href="javascript:;">Incentive Structures for Decentralizing Science</a></li>
+                    <li><a href="javascript:;">At Your Own Risk - Decentralized Science Art Fair</a></li>
+                    <li><a href="javascript:;">HIV Antibody Plasmid Gene Therapy Experiments</a></li>
+                    <li><a href="javascript:;">Shifting Ideas to Reality</a></li>
+                    <li><a href="javascript:;">Web of Trust: A Taxonomy of Claims</a></li>
+                  </ul>
+      <!--             <div class="content__btn-block">
+                    <div class="content__btn-label small">View all works</div><a class="content__btn-btn btn btn--arrow" href="blog.html" target="_blank">
+                      <svg>
+                        <use xlink:href="./svg/sprite.svg#arrow"></use>
+                      </svg></a>
+                  </div> -->
+                </div>
+                <div class="content__right">
+                  <div class="news__blocks">
+                    <div class="news__block active">
+                      <div class="news__block-info">
+                        <!-- <div class="news__block-date small">3th January, 2020</div> -->
+                        <div class="news__block-text small">How can we change the incentives around science to increase the odds that innovate therapies will make it to market?</div>
+                        <div class="news__block-number">(01)</div>
+                      </div>
+                      <div class="news__block-image"><a href="https://mirror.xyz/0x735B3E637d8006887D97b7DfE4D846a3F1002A6D/9oH5S3OlNERMhRNPUPoFmuF9VqLLinzd5ZEs9RSXhek" target="_blank"><img src="img/article-1.png" alt=""></a></div>
+                    </div>
+                    <div class="news__block active">
+                      <div class="news__block-info">
+                        <!-- <div class="news__block-date small">3th January, 2020</div> -->
+                        <div class="news__block-text small">At Your Own Risk - an science art show dedicated to the beauty and advancement of knowledge.</div>
+                        <div class="news__block-number">(02)</div>
+                      </div>
+                      <div class="news__block-image"><a href="https://mirror.xyz/0x262b4F07e42BBc33F597fcf0d854e9DAFaf3D469/JSzFXdzDxsk527GRLnVHIlg0TA-hMMP6XEVqIZ3q0eA" target="_blank"><img src="img/article-2.png" alt=""></a></div>
+                    </div>
+                    <div class="news__block active">
+                      <div class="news__block-info">
+                        <!-- <div class="news__block-date small">3th January, 2020</div> -->
+                        <div class="news__block-text small">An update on a pilot study examining the use of a plasmid to deliver HIV antibodies.</div>
+                        <div class="news__block-number">(03)</div>
+                      </div>
+                      <div class="news__block-image"><a href="https://mirror.xyz/0x735B3E637d8006887D97b7DfE4D846a3F1002A6D/FGOfWaNnIj8xllXb8PGS_AqFKDDFPl9C2xHLXJglaeQ" target="_blank"><img src="img/article-3.png" alt=""></a></div>
+                    </div>
+                    <div class="news__block active">
+                      <div class="news__block-info">
+                        <!-- <div class="news__block-date small">3th January, 2020</div> -->
+                        <div class="news__block-text small">An introductory article on how advances in distributed ledger technology could enhance the scientific process.</div>
+                        <div class="news__block-number">(04)</div>
+                      </div>
+                      <div class="news__block-image"><a href="https://aitheric.medium.com/shifting-ideas-to-reality-3796f7dafc07" target="_blank"><img src="img/article-4.png" alt=""></a></div>
+                    </div>
+                    <div class="news__block active">
+                      <div class="news__block-info">
+                        <!-- <div class="news__block-date small">3th January, 2020</div> -->
+                        <div class="news__block-text small">A Web of Trust is a way of building community, backed by cryptography. It could be ideal for validating data and supply chains.</div>
+                        <div class="news__block-number">(05)</div>
+                      </div>
+                      <div class="news__block-image"><a href="https://aitheric.medium.com/web-of-trust-a-taxonomy-for-claims-d136ae6f2ee3" target="_blank"><img src="img/article-5.png" alt=""></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="scrollable" id="contactme">
+            <section class="contacts">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Contact</div>
+                    <!-- <div>6.0</div> -->
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Collaborate</div>
+                    <div class="medium">Let's discuss your research needs.</div>
+                  </div>
+                  <ul class="content__menu contacts__menu">
+                    <li class="active"><a class="noicon" href="javascript:;" onclick="window.open('mailto:contact@researchcollective.com')">mail: contact@researchcollective.io</a></li>
+                    <!-- <li class="active"><a class="noicon" href="javascript:;" onclick="window.open('skype:robert')">skype: robert</a></li> -->
+                    <!-- <li class="active"><a href="https://behance.net/Paulggooo" target="_blank">www.behance.net/Paulggooo</a></li> -->
+                    <li class="active"><a class="noicon" href="https://t.me/aitheric" target="_blank">telegram: aitheric</a></li>
+                  </ul>
+                  <div class="contacts__copyright small">Web template © Pattison 2021.  All Rights Resevered</div>
+                </div>
+                <div class="content__right">
+                  <div class="content__subtitle">Get the <span>conversation</span> started.</div>
+                  <form class="content__contacts contacts__form js-contact-form" method="post">
+                    <div class="content__brief">
+                      <div class="content__brief-title">
+                        <label class="input-file">
+                          <!-- <input type="file" name="file" id="brief"><span>send a brief</span> -->
+                        </label>
+                      </div>
+                      <!-- <div class="content__brief-text small">I recommend filling out a brief to assess the cost of the project. <label for="brief">Brief</label></div> -->
+                    </div>
+                    <div class="content__form">
+                      <label class="content__form-input">
+                        <input type="text" name="name"><span class="content__form-placeholder">name</span>
+                      </label>
+                      <label class="content__form-input">
+                        <input type="email" name="emal" required=""><span class="content__form-placeholder">EMAIL *</span>
+                      </label>
+                      <label class="content__form-input">
+                        <input type="text" name="msg" required="" minlength="10"><span class="content__form-placeholder">MESSAGE *</span>
+                      </label>
+                      <div class="content__form-btn">
+                        <button class="btn btn--arrow" type="submit">
+						Send
+                          <svg>
+                            <use xlink:href="./svg/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
