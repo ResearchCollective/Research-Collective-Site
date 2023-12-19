@@ -973,23 +973,23 @@ $(window).on('load',function (){
                 }
             });
 
-            $(document).on('click', '.projects__menu a', function () {
-                event.preventDefault();
+            $(document).on('click', '.projects__menu a', function (e) {
+                e.preventDefault();
                 let parent = $(this).parent(),
                     progress = projectHeightsScroll[parent.index()] / (projectHeightsTotal - $('.projects__blocks').innerHeight()),
-                    scrollTo = parseInt(linkData[1]) + addBlocksScroll*2 + projectBlocksScroll*progress;
+                    scrollTo = parseInt(linkData[1]) + addBlocksScroll + projectBlocksScroll*progress;
                 st.scroll(scrollTo);
             });
-            $(document).on('click', '.news__menu a', function () {
-                event.preventDefault();
+            $(document).on('click', '.news__menu a', function (e) {
+                e.preventDefault();
                 let parent = $(this).parent(),
                     progress = newsHeightsScroll[parent.index()] / (newsHeightsTotal - $('.news__blocks').innerHeight()),
                     scrollTo = parseInt(linkData[5]) + addBlocksScroll + newsBlocksScroll*progress;
                 st.scroll(scrollTo);
             });
         } else {
-            $(document).on('click', '.js-scroll-link', function () {
-                event.preventDefault();
+            $(document).on('click', '.js-scroll-link', function (e) {
+                e.preventDefault();
                 let href = $(this).attr('href'),
                     topPos = $(href).offset(),
                     header = $('.header').height();

@@ -1275,7 +1275,18 @@ a.btn {
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .projects__blocks {
       display: none; } }
-
+.projects__block-number {
+  font-weight: 500;
+  font-size: 2.08333vw;
+  line-height: 1; }
+.projects__block-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2.86458vw; }
 .projects__block {
   height: auto;
   overflow: visible;
