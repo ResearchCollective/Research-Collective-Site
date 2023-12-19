@@ -1400,3 +1400,22 @@ a.btn {
       margin-top: 13.33333vw; } }
 
 /*# sourceMappingURL=maps/main.css.map */
+.social-telegram {
+  display: flex;
+  padding-top: 5vw;
+  align-items: center;
+  cursor: pointer;
+  
+}
+.social-telegram .telegram-svg svg {
+  width: 1.5vw;
+  height: 1.5vw;
+  margin-right: .8vw;
+}
+.social-telegram .telegram-text {
+  vertical-align: center;
+}
+.social-telegram .telegram-text a:hover {
+  color: #B66449;
+}
+  
