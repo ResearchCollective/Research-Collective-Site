@@ -6,8 +6,8 @@ $message = $_POST["msg"];
 
 
 
-//$EmailTo = "contact@researchcollective.io";
-$EmailTo = "b3nrules@me.com";
+$EmailTo = "contact@researchcollective.io";
+//$EmailTo = "b3nrules@me.com";
 $Title = "New Research Collective Message";
 
 $Fields = '';
