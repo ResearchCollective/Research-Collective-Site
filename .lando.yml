@@ -1,0 +1,10 @@
+name: research-collective
+services:
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - php
+  php:
+    type: php
+    via: nginx
+    webroot: html

@@ -232,7 +232,13 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100%;
     position: absolute; }
-
+button {
+  font-weight: 600 !important;
+  font-size: 1.2vw;
+}
+a.btn {
+  font-family: arial;
+}
 .btn {
   border: none;
   color: #E2DCC8;
@@ -242,8 +248,9 @@ body::-webkit-scrollbar-thumb {
   background: #B66449;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
-  font-size: 0.9375vw;
-  line-height: 130%;
+  font-size: 1.2vw;
+  font-weight: 600;
+  line-height: 1.3;
   text-transform: uppercase;
   text-align: center;
   padding: 0.72917vw 3.125vw; }
@@ -1268,7 +1275,18 @@ body::-webkit-scrollbar-thumb {
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .projects__blocks {
       display: none; } }
-
+.projects__block-number {
+  font-weight: 500;
+  font-size: 2.08333vw;
+  line-height: 1; }
+.projects__block-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2.86458vw; }
 .projects__block {
   height: auto;
   overflow: visible;
@@ -1393,3 +1411,22 @@ body::-webkit-scrollbar-thumb {
       margin-top: 13.33333vw; } }
 
 /*# sourceMappingURL=maps/main.css.map */
+.social-telegram {
+  display: flex;
+  padding-top: 5vw;
+  align-items: center;
+  cursor: pointer;
+  
+}
+.social-telegram .telegram-svg svg {
+  width: 1.5vw;
+  height: 1.5vw;
+  margin-right: .8vw;
+}
+.social-telegram .telegram-text {
+  vertical-align: center;
+}
+.social-telegram .telegram-text a:hover {
+  color: #B66449;
+}
+  
