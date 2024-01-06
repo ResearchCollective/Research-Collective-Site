@@ -26,7 +26,7 @@ $Fields .= "\n";
 
 
 // send email
-$success = mail($EmailTo,  $Title,  $Fields, "From: ".$email);
+$success = mail($EmailTo,  $Title,  $Fields, "From: contact@researchcollective.io");
 if (!$success) {
     $errorMessage = error_get_last()['message'];
     echo $errorMessage;
