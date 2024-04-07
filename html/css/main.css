@@ -905,12 +905,16 @@ a.btn {
              object-fit: contain;
           display: block; }
       .home-page .content__award-title {
+        text-align: center;
         width: 16.14583vw;
         margin-right: 3.02083vw; }
         @media screen and (max-width: 768px) and (orientation: portrait) {
           .home-page .content__award-title {
             width: calc(100% - 23vw);
             margin-right: 0; } }
+        .home-page .content__award-title img {
+          margin-bottom: 5px;
+        }
         .home-page .content__award-title p {
           font-size: 1.14583vw;
           line-height: 130%;
@@ -921,7 +925,10 @@ a.btn {
         .home-page .content__award-title span {
           opacity: 0.5; }
       .home-page .content__award-text {
-        width: 20.3125vw; }
+        width: 40vw;
+        margin-left: 3vw;
+        font-size: 1em;
+       }
         @media screen and (max-width: 768px) and (orientation: portrait) {
           .home-page .content__award-text {
             width: 100%;
@@ -929,6 +936,14 @@ a.btn {
                     box-sizing: border-box;
             margin-top: 4vw;
             padding-left: 22.13333vw; } }
+    .home-page .socials {
+      width: 10vw;
+      margin-left: 3vw;
+      font-size: 1em;
+    }
+    .home-page .socials a {
+      margin-right: 5px;
+    }
     .home-page .content__contacts {
       display: -webkit-box;
       display: -ms-flexbox;
