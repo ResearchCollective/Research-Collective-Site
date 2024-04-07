@@ -914,6 +914,7 @@ a.btn {
             margin-right: 0; } }
         .home-page .content__award-title img {
           margin-bottom: 5px;
+          border-radius: 5px;
         }
         .home-page .content__award-title p {
           font-size: 1.14583vw;
